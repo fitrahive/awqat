@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -71,26 +71,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 $active_group = 'default';
-$query_builder = TRUE;
+$query_builder = true;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
+	'hostname' => $_ENV['DB_HOSTNAME'] ?? 'localhost',
+	'username' => $_ENV['DB_USERNAME'] ?? 'root',
+	'password' => $_ENV['DB_PASSWORD'] ?? '',
+	'database' => $_ENV['DB_DATABASE'] ?? 'awqat',
+	'dbdriver' => $_ENV['DB_DRIVER'] ?? 'mysqli',
+	'dbprefix' => $_ENV['DB_PREFIX'] ?? '',
+	'pconnect' => false,
 	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
+	'cache_on' => false,
 	'cachedir' => '',
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
 	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
+	'encrypt' => false,
+	'compress' => false,
+	'stricton' => false,
+	'failover' => [],
+	'save_queries' => true
 );

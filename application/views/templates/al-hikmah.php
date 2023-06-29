@@ -34,17 +34,17 @@
 	</header>
 
 	<main class="text-white">
-		<section id="current" class="fixed top-[135px] mx-auto inset-x-0 flex justify-center">
-			<div class="p-3 bg-purple-950/[.75] rounded-lg">
+		<section id="current" class="fixed bottom-[65px] right-[30px]">
+			<div class="p-3 bg-[#622A7F]/[.8] rounded-lg">
 				<span>Dzuhur 01:00:00</span>
 			</div>
 		</section>
 
-		<section id="prayer-times" class="px-8 w-screen grid grid-cols-6 gap-4 fixed bottom-[65px]">
+		<section id="prayer-times" class="px-8 w-screen grid grid-cols-6 gap-4 fixed top-[135px]">
 			<?php foreach ([1, 2, 3, 4, 5, 6] as $index) : ?>
-				<div class="p-4 bg-purple-950/[.75] rounded-lg flex flex-col items-center">
+				<div class="p-4 bg-[#18373D]/[.75] rounded-lg flex flex-col items-center">
 					<small class="text-base font-bold">Imsak</small>
-					<span class="text-lg">03:00:00</span>
+					<span class="text-2xl">03:00:00</span>
 				</div>
 			<?php endforeach ?>
 		</section>

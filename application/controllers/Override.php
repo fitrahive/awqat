@@ -1,10 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Override extends CI_Controller
+class Override extends BaseController
 {
-	public CI_Output $output;
-
 	public function notfound()
 	{
 		$this->output->set_status_header(404);

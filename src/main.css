@@ -54,5 +54,5 @@ body.screen {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @apply h-screen w-screen overflow-hidden leading-none font-['Inter'];
+  @apply h-screen w-screen overflow-hidden leading-none font-['Inter'] cursor-none;
 }

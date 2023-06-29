@@ -55,5 +55,10 @@ $route['404_override'] = 'override/notfound';
 $route['500_override'] = 'override/server';
 $route['translate_uri_dashes'] = false;
 
+$route['screen']['GET'] = 'home/screen';
+
+$route['auth/login']['GET'] = 'app/auth';
+$route['auth/login']['POST'] = 'app/auth/process';
+
 // disable auto route
 $route['(.*)'] = 'none';

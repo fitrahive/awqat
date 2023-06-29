@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
 </head>
 
-<body style="background-image: url(<?= base_url('assets/img/sheikh-zayed.jpg') ?>)">
+<body class="screen" style="background-image: url(<?= base_url('assets/img/sheikh-zayed.jpg') ?>)">
 	<header class="w-100 bg-sky-950/[.7] text-white p-4 flex justify-between items-center">
 		<div class="flex flex-col divide-y-2 divide-gray-400 gap-3">
 			<div class="flex flex-col">
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col items-center gap-2">
-			<h1 class="text-6xl uppercase">Masjid Al-Jabbar</h1>
+			<h1 class="text-6xl uppercase font-['Jacques_Francois']">Masjid Al-Jabbar</h1>
 			<p class="text-base text-gray-300">
 				Jl. Cimincrang No.14, Cimenerang, Kecamatan Gedebage, Kota Bandung, Jawa Barat
 			</p>

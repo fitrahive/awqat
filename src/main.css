@@ -2,9 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+@font-face {
+  font-display: swap;
+  font-family: "Jacques Francois";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/jacques-francois.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/inter-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/inter-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/inter-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/inter-900.woff2") format("woff2");
+}
+
+body.screen {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @apply h-screen w-screen overflow-hidden leading-none;
+  @apply h-screen w-screen overflow-hidden leading-none font-['Inter'];
 }

@@ -35,33 +35,33 @@
 
 	<main class="text-white">
 		<section id="current" class="fixed top-[135px] mx-auto inset-x-0 flex justify-center">
-			<div class="p-3 bg-[#892F3B] rounded-lg">
+			<div class="p-3 bg-[#892F3B]/[.8] rounded-lg">
 				<span>Dzuhur 01:00:00</span>
 			</div>
 		</section>
 
 		<section id="prayer-times" class="px-8 w-screen grid grid-cols-6 gap-4 fixed bottom-[65px]">
-			<div class="p-4 bg-[#622A7F]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#622A7F]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>
-			<div class="p-4 bg-[#105E6B]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#105E6B]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>
-			<div class="p-4 bg-[#915A21]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#915A21]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>
-			<div class="p-4 bg-[#35674A]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#35674A]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>
-			<div class="p-4 bg-[#892F3B]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#892F3B]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>
-			<div class="p-4 bg-[#519FE7]/[.75] rounded-lg flex flex-col items-center">
+			<div class="p-4 bg-[#519FE7]/[.85] rounded-lg flex flex-col items-center">
 				<small class="text-base font-bold">Imsak</small>
 				<span class="text-2xl">03:00:00</span>
 			</div>

@@ -1,0 +1,24 @@
+{
+  "name": "@sooluh/ngolshop",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git add --all && git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3"
+  }
+}

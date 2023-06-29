@@ -1,13 +1,13 @@
 {
-	"name": "fitrahive/awqat",
-	"description": "Take control of your mosque screens with Awqat",
-	"type": "project",
-	"homepage": "https://github.com/fitrahive/awqat",
-	"license": "Apache-2.0",
-	"require": {
-		"php": ">=5.3.7",
-		"vlucas/phpdotenv": "^5.5",
-		"geniusts/prayer-times": "^1.0",
-		"paragonie/random_compat": ">=2"
-	}
+  "name": "fitrahive/awqat",
+  "description": "Take control of your mosque screens with Awqat",
+  "type": "project",
+  "homepage": "https://github.com/fitrahive/awqat",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=5.3.7",
+    "vlucas/phpdotenv": "^5.5",
+    "geniusts/prayer-times": "^1.0",
+    "paragonie/random_compat": ">=2"
+  }
 }

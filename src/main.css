@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply h-screen w-screen overflow-hidden leading-none;
+}

@@ -8,12 +8,12 @@ class Override extends CI_Controller
 	public function notfound()
 	{
 		$this->output->set_status_header(404);
-		$this->twig->display('error');
+		$this->load->view('error');
 	}
 
 	public function server()
 	{
 		$this->output->set_status_header(500);
-		$this->twig->display('error');
+		$this->load->view('error');
 	}
 }

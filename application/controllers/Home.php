@@ -5,6 +5,6 @@ class Home extends CI_Controller
 {
 	public function index()
 	{
-		$this->twig->display('templates/fitrahive');
+		$this->load->view('templates/fitrahive', []);
 	}
 }

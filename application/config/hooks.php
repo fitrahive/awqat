@@ -17,6 +17,13 @@ $hook['pre_system'] = function () {
 	$dotenv->load();
 };
 
+$hook['post_controller_constructor'][] = [
+	'class' => '',
+	'function' => 'language',
+	'filename' => 'language.php',
+	'filepath' => 'hooks',
+];
+
 $hook['display_override'][] = [
 	'class' => '',
 	'function' => 'compress',

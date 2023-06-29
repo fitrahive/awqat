@@ -119,7 +119,7 @@ $config['enable_hooks'] = true;
 | https://codeigniter.com/userguide3/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'Fitrahive_';
+$config['subclass_prefix'] = 'Base';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,847 +1,540 @@
 {
-	"_readme": [
-		"This file locks the dependencies of your project to a known state",
-		"Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
-		"This file is @generated automatically"
-	],
-	"content-hash": "2144ed7e1cdfafdcf501262aa6ae4637",
-	"packages": [
-		{
-			"name": "geniusts/prayer-times",
-			"version": "1.0.5",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/GeniusTS/prayer-times.git",
-				"reference": "79fda6eb5e5fa6736f3a3449aa18726111398efc"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/GeniusTS/prayer-times/zipball/79fda6eb5e5fa6736f3a3449aa18726111398efc",
-				"reference": "79fda6eb5e5fa6736f3a3449aa18726111398efc",
-				"shasum": ""
-			},
-			"require": {
-				"nesbot/carbon": "^1.22|^2.0.0",
-				"php": ">=7"
-			},
-			"type": "library",
-			"autoload": {
-				"psr-4": {
-					"GeniusTS\\PrayerTimes\\": "src/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Abdul-Kader Zein-Eddin",
-					"email": "aboudeh1987@gmail.com"
-				}
-			],
-			"description": "A PHP package to calculate prayer times",
-			"support": {
-				"issues": "https://github.com/GeniusTS/prayer-times/issues",
-				"source": "https://github.com/GeniusTS/prayer-times/tree/1.0.5"
-			},
-			"time": "2019-09-04T18:29:42+00:00"
-		},
-		{
-			"name": "graham-campbell/result-type",
-			"version": "v1.1.1",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/GrahamCampbell/Result-Type.git",
-				"reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
-				"reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
-				"shasum": ""
-			},
-			"require": {
-				"php": "^7.2.5 || ^8.0",
-				"phpoption/phpoption": "^1.9.1"
-			},
-			"require-dev": {
-				"phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
-			},
-			"type": "library",
-			"autoload": {
-				"psr-4": {
-					"GrahamCampbell\\ResultType\\": "src/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Graham Campbell",
-					"email": "hello@gjcampbell.co.uk",
-					"homepage": "https://github.com/GrahamCampbell"
-				}
-			],
-			"description": "An Implementation Of The Result Type",
-			"keywords": [
-				"Graham Campbell",
-				"GrahamCampbell",
-				"Result Type",
-				"Result-Type",
-				"result"
-			],
-			"support": {
-				"issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-				"source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.1"
-			},
-			"funding": [
-				{
-					"url": "https://github.com/GrahamCampbell",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
-					"type": "tidelift"
-				}
-			],
-			"time": "2023-02-25T20:23:15+00:00"
-		},
-		{
-			"name": "nesbot/carbon",
-			"version": "2.67.0",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/briannesbitt/Carbon.git",
-				"reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c1001b3bc75039b07f38a79db5237c4c529e04c8",
-				"reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8",
-				"shasum": ""
-			},
-			"require": {
-				"ext-json": "*",
-				"php": "^7.1.8 || ^8.0",
-				"symfony/polyfill-mbstring": "^1.0",
-				"symfony/polyfill-php80": "^1.16",
-				"symfony/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
-			},
-			"require-dev": {
-				"doctrine/dbal": "^2.0 || ^3.1.4",
-				"doctrine/orm": "^2.7",
-				"friendsofphp/php-cs-fixer": "^3.0",
-				"kylekatarnls/multi-tester": "^2.0",
-				"ondrejmirtes/better-reflection": "*",
-				"phpmd/phpmd": "^2.9",
-				"phpstan/extension-installer": "^1.0",
-				"phpstan/phpstan": "^0.12.99 || ^1.7.14",
-				"phpunit/php-file-iterator": "^2.0.5 || ^3.0.6",
-				"phpunit/phpunit": "^7.5.20 || ^8.5.26 || ^9.5.20",
-				"squizlabs/php_codesniffer": "^3.4"
-			},
-			"bin": ["bin/carbon"],
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-3.x": "3.x-dev",
-					"dev-master": "2.x-dev"
-				},
-				"laravel": {
-					"providers": ["Carbon\\Laravel\\ServiceProvider"]
-				},
-				"phpstan": {
-					"includes": ["extension.neon"]
-				}
-			},
-			"autoload": {
-				"psr-4": {
-					"Carbon\\": "src/Carbon/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Brian Nesbitt",
-					"email": "brian@nesbot.com",
-					"homepage": "https://markido.com"
-				},
-				{
-					"name": "kylekatarnls",
-					"homepage": "https://github.com/kylekatarnls"
-				}
-			],
-			"description": "An API extension for DateTime that supports 281 different languages.",
-			"homepage": "https://carbon.nesbot.com",
-			"keywords": ["date", "datetime", "time"],
-			"support": {
-				"docs": "https://carbon.nesbot.com/docs",
-				"issues": "https://github.com/briannesbitt/Carbon/issues",
-				"source": "https://github.com/briannesbitt/Carbon"
-			},
-			"funding": [
-				{
-					"url": "https://github.com/sponsors/kylekatarnls",
-					"type": "github"
-				},
-				{
-					"url": "https://opencollective.com/Carbon#sponsor",
-					"type": "opencollective"
-				},
-				{
-					"url": "https://tidelift.com/subscription/pkg/packagist-nesbot-carbon?utm_source=packagist-nesbot-carbon&utm_medium=referral&utm_campaign=readme",
-					"type": "tidelift"
-				}
-			],
-			"time": "2023-05-25T22:09:47+00:00"
-		},
-		{
-			"name": "paragonie/random_compat",
-			"version": "v9.99.100",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/paragonie/random_compat.git",
-				"reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
-				"reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">= 7"
-			},
-			"require-dev": {
-				"phpunit/phpunit": "4.*|5.*",
-				"vimeo/psalm": "^1"
-			},
-			"suggest": {
-				"ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-			},
-			"type": "library",
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Paragon Initiative Enterprises",
-					"email": "security@paragonie.com",
-					"homepage": "https://paragonie.com"
-				}
-			],
-			"description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-			"keywords": ["csprng", "polyfill", "pseudorandom", "random"],
-			"support": {
-				"email": "info@paragonie.com",
-				"issues": "https://github.com/paragonie/random_compat/issues",
-				"source": "https://github.com/paragonie/random_compat"
-			},
-			"time": "2020-10-15T08:29:30+00:00"
-		},
-		{
-			"name": "phpoption/phpoption",
-			"version": "1.9.1",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/schmittjoh/php-option.git",
-				"reference": "dd3a383e599f49777d8b628dadbb90cae435b87e"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dd3a383e599f49777d8b628dadbb90cae435b87e",
-				"reference": "dd3a383e599f49777d8b628dadbb90cae435b87e",
-				"shasum": ""
-			},
-			"require": {
-				"php": "^7.2.5 || ^8.0"
-			},
-			"require-dev": {
-				"bamarni/composer-bin-plugin": "^1.8.2",
-				"phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
-			},
-			"type": "library",
-			"extra": {
-				"bamarni-bin": {
-					"bin-links": true,
-					"forward-command": true
-				},
-				"branch-alias": {
-					"dev-master": "1.9-dev"
-				}
-			},
-			"autoload": {
-				"psr-4": {
-					"PhpOption\\": "src/PhpOption/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["Apache-2.0"],
-			"authors": [
-				{
-					"name": "Johannes M. Schmitt",
-					"email": "schmittjoh@gmail.com",
-					"homepage": "https://github.com/schmittjoh"
-				},
-				{
-					"name": "Graham Campbell",
-					"email": "hello@gjcampbell.co.uk",
-					"homepage": "https://github.com/GrahamCampbell"
-				}
-			],
-			"description": "Option Type for PHP",
-			"keywords": ["language", "option", "php", "type"],
-			"support": {
-				"issues": "https://github.com/schmittjoh/php-option/issues",
-				"source": "https://github.com/schmittjoh/php-option/tree/1.9.1"
-			},
-			"funding": [
-				{
-					"url": "https://github.com/GrahamCampbell",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
-					"type": "tidelift"
-				}
-			],
-			"time": "2023-02-25T19:38:58+00:00"
-		},
-		{
-			"name": "symfony/deprecation-contracts",
-			"version": "v2.5.2",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/deprecation-contracts.git",
-				"reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
-				"reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.1"
-			},
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-main": "2.5-dev"
-				},
-				"thanks": {
-					"name": "symfony/contracts",
-					"url": "https://github.com/symfony/contracts"
-				}
-			},
-			"autoload": {
-				"files": ["function.php"]
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Nicolas Grekas",
-					"email": "p@tchwork.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "A generic function and convention to trigger deprecation notices",
-			"homepage": "https://symfony.com",
-			"support": {
-				"source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.2"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-01-02T09:53:40+00:00"
-		},
-		{
-			"name": "symfony/polyfill-ctype",
-			"version": "v1.27.0",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/polyfill-ctype.git",
-				"reference": "5bbc823adecdae860bb64756d639ecfec17b050a"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/5bbc823adecdae860bb64756d639ecfec17b050a",
-				"reference": "5bbc823adecdae860bb64756d639ecfec17b050a",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.1"
-			},
-			"provide": {
-				"ext-ctype": "*"
-			},
-			"suggest": {
-				"ext-ctype": "For best performance"
-			},
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-main": "1.27-dev"
-				},
-				"thanks": {
-					"name": "symfony/polyfill",
-					"url": "https://github.com/symfony/polyfill"
-				}
-			},
-			"autoload": {
-				"files": ["bootstrap.php"],
-				"psr-4": {
-					"Symfony\\Polyfill\\Ctype\\": ""
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Gert de Pagter",
-					"email": "BackEndTea@gmail.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "Symfony polyfill for ctype functions",
-			"homepage": "https://symfony.com",
-			"keywords": ["compatibility", "ctype", "polyfill", "portable"],
-			"support": {
-				"source": "https://github.com/symfony/polyfill-ctype/tree/v1.27.0"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-11-03T14:55:06+00:00"
-		},
-		{
-			"name": "symfony/polyfill-mbstring",
-			"version": "v1.27.0",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/polyfill-mbstring.git",
-				"reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
-				"reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.1"
-			},
-			"provide": {
-				"ext-mbstring": "*"
-			},
-			"suggest": {
-				"ext-mbstring": "For best performance"
-			},
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-main": "1.27-dev"
-				},
-				"thanks": {
-					"name": "symfony/polyfill",
-					"url": "https://github.com/symfony/polyfill"
-				}
-			},
-			"autoload": {
-				"files": ["bootstrap.php"],
-				"psr-4": {
-					"Symfony\\Polyfill\\Mbstring\\": ""
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Nicolas Grekas",
-					"email": "p@tchwork.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "Symfony polyfill for the Mbstring extension",
-			"homepage": "https://symfony.com",
-			"keywords": ["compatibility", "mbstring", "polyfill", "portable", "shim"],
-			"support": {
-				"source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-11-03T14:55:06+00:00"
-		},
-		{
-			"name": "symfony/polyfill-php80",
-			"version": "v1.27.0",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/polyfill-php80.git",
-				"reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-				"reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.1"
-			},
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-main": "1.27-dev"
-				},
-				"thanks": {
-					"name": "symfony/polyfill",
-					"url": "https://github.com/symfony/polyfill"
-				}
-			},
-			"autoload": {
-				"files": ["bootstrap.php"],
-				"psr-4": {
-					"Symfony\\Polyfill\\Php80\\": ""
-				},
-				"classmap": ["Resources/stubs"]
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Ion Bazan",
-					"email": "ion.bazan@gmail.com"
-				},
-				{
-					"name": "Nicolas Grekas",
-					"email": "p@tchwork.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
-			"homepage": "https://symfony.com",
-			"keywords": ["compatibility", "polyfill", "portable", "shim"],
-			"support": {
-				"source": "https://github.com/symfony/polyfill-php80/tree/v1.27.0"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-11-03T14:55:06+00:00"
-		},
-		{
-			"name": "symfony/translation",
-			"version": "v5.4.24",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/translation.git",
-				"reference": "de237e59c5833422342be67402d487fbf50334ff"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/translation/zipball/de237e59c5833422342be67402d487fbf50334ff",
-				"reference": "de237e59c5833422342be67402d487fbf50334ff",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.2.5",
-				"symfony/deprecation-contracts": "^2.1|^3",
-				"symfony/polyfill-mbstring": "~1.0",
-				"symfony/polyfill-php80": "^1.16",
-				"symfony/translation-contracts": "^2.3"
-			},
-			"conflict": {
-				"symfony/config": "<4.4",
-				"symfony/console": "<5.3",
-				"symfony/dependency-injection": "<5.0",
-				"symfony/http-kernel": "<5.0",
-				"symfony/twig-bundle": "<5.0",
-				"symfony/yaml": "<4.4"
-			},
-			"provide": {
-				"symfony/translation-implementation": "2.3"
-			},
-			"require-dev": {
-				"psr/log": "^1|^2|^3",
-				"symfony/config": "^4.4|^5.0|^6.0",
-				"symfony/console": "^5.4|^6.0",
-				"symfony/dependency-injection": "^5.0|^6.0",
-				"symfony/finder": "^4.4|^5.0|^6.0",
-				"symfony/http-client-contracts": "^1.1|^2.0|^3.0",
-				"symfony/http-kernel": "^5.0|^6.0",
-				"symfony/intl": "^4.4|^5.0|^6.0",
-				"symfony/polyfill-intl-icu": "^1.21",
-				"symfony/service-contracts": "^1.1.2|^2|^3",
-				"symfony/yaml": "^4.4|^5.0|^6.0"
-			},
-			"suggest": {
-				"psr/log-implementation": "To use logging capability in translator",
-				"symfony/config": "",
-				"symfony/yaml": ""
-			},
-			"type": "library",
-			"autoload": {
-				"files": ["Resources/functions.php"],
-				"psr-4": {
-					"Symfony\\Component\\Translation\\": ""
-				},
-				"exclude-from-classmap": ["/Tests/"]
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Fabien Potencier",
-					"email": "fabien@symfony.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "Provides tools to internationalize your application",
-			"homepage": "https://symfony.com",
-			"support": {
-				"source": "https://github.com/symfony/translation/tree/v5.4.24"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2023-05-19T12:34:17+00:00"
-		},
-		{
-			"name": "symfony/translation-contracts",
-			"version": "v2.5.2",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/symfony/translation-contracts.git",
-				"reference": "136b19dd05cdf0709db6537d058bcab6dd6e2dbe"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/symfony/translation-contracts/zipball/136b19dd05cdf0709db6537d058bcab6dd6e2dbe",
-				"reference": "136b19dd05cdf0709db6537d058bcab6dd6e2dbe",
-				"shasum": ""
-			},
-			"require": {
-				"php": ">=7.2.5"
-			},
-			"suggest": {
-				"symfony/translation-implementation": ""
-			},
-			"type": "library",
-			"extra": {
-				"branch-alias": {
-					"dev-main": "2.5-dev"
-				},
-				"thanks": {
-					"name": "symfony/contracts",
-					"url": "https://github.com/symfony/contracts"
-				}
-			},
-			"autoload": {
-				"psr-4": {
-					"Symfony\\Contracts\\Translation\\": ""
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["MIT"],
-			"authors": [
-				{
-					"name": "Nicolas Grekas",
-					"email": "p@tchwork.com"
-				},
-				{
-					"name": "Symfony Community",
-					"homepage": "https://symfony.com/contributors"
-				}
-			],
-			"description": "Generic abstractions related to translation",
-			"homepage": "https://symfony.com",
-			"keywords": [
-				"abstractions",
-				"contracts",
-				"decoupling",
-				"interfaces",
-				"interoperability",
-				"standards"
-			],
-			"support": {
-				"source": "https://github.com/symfony/translation-contracts/tree/v2.5.2"
-			},
-			"funding": [
-				{
-					"url": "https://symfony.com/sponsor",
-					"type": "custom"
-				},
-				{
-					"url": "https://github.com/fabpot",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-06-27T16:58:25+00:00"
-		},
-		{
-			"name": "vlucas/phpdotenv",
-			"version": "v5.5.0",
-			"source": {
-				"type": "git",
-				"url": "https://github.com/vlucas/phpdotenv.git",
-				"reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7"
-			},
-			"dist": {
-				"type": "zip",
-				"url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
-				"reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
-				"shasum": ""
-			},
-			"require": {
-				"ext-pcre": "*",
-				"graham-campbell/result-type": "^1.0.2",
-				"php": "^7.1.3 || ^8.0",
-				"phpoption/phpoption": "^1.8",
-				"symfony/polyfill-ctype": "^1.23",
-				"symfony/polyfill-mbstring": "^1.23.1",
-				"symfony/polyfill-php80": "^1.23.1"
-			},
-			"require-dev": {
-				"bamarni/composer-bin-plugin": "^1.4.1",
-				"ext-filter": "*",
-				"phpunit/phpunit": "^7.5.20 || ^8.5.30 || ^9.5.25"
-			},
-			"suggest": {
-				"ext-filter": "Required to use the boolean validator."
-			},
-			"type": "library",
-			"extra": {
-				"bamarni-bin": {
-					"bin-links": true,
-					"forward-command": true
-				},
-				"branch-alias": {
-					"dev-master": "5.5-dev"
-				}
-			},
-			"autoload": {
-				"psr-4": {
-					"Dotenv\\": "src/"
-				}
-			},
-			"notification-url": "https://packagist.org/downloads/",
-			"license": ["BSD-3-Clause"],
-			"authors": [
-				{
-					"name": "Graham Campbell",
-					"email": "hello@gjcampbell.co.uk",
-					"homepage": "https://github.com/GrahamCampbell"
-				},
-				{
-					"name": "Vance Lucas",
-					"email": "vance@vancelucas.com",
-					"homepage": "https://github.com/vlucas"
-				}
-			],
-			"description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-			"keywords": ["dotenv", "env", "environment"],
-			"support": {
-				"issues": "https://github.com/vlucas/phpdotenv/issues",
-				"source": "https://github.com/vlucas/phpdotenv/tree/v5.5.0"
-			},
-			"funding": [
-				{
-					"url": "https://github.com/GrahamCampbell",
-					"type": "github"
-				},
-				{
-					"url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
-					"type": "tidelift"
-				}
-			],
-			"time": "2022-10-16T01:01:54+00:00"
-		}
-	],
-	"packages-dev": [],
-	"aliases": [],
-	"minimum-stability": "stable",
-	"stability-flags": [],
-	"prefer-stable": false,
-	"prefer-lowest": false,
-	"platform": {
-		"php": ">=5.3.7"
-	},
-	"platform-dev": [],
-	"plugin-api-version": "2.3.0"
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "674b154fae061ff2d612de35e0c27625",
+    "packages": [
+        {
+            "name": "graham-campbell/result-type",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Result-Type.git",
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0",
+                "phpoption/phpoption": "^1.9.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\ResultType\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                }
+            ],
+            "description": "An Implementation Of The Result Type",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Result Type",
+                "Result-Type",
+                "result"
+            ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-02-25T20:23:15+00:00"
+        },
+        {
+            "name": "paragonie/random_compat",
+            "version": "v9.99.100",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
+            "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "phpoption/phpoption",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schmittjoh/php-option.git",
+                "reference": "dd3a383e599f49777d8b628dadbb90cae435b87e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dd3a383e599f49777d8b628dadbb90cae435b87e",
+                "reference": "dd3a383e599f49777d8b628dadbb90cae435b87e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": true
+                },
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpOption\\": "src/PhpOption/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "https://github.com/schmittjoh"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                }
+            ],
+            "description": "Option Type for PHP",
+            "keywords": [
+                "language",
+                "option",
+                "php",
+                "type"
+            ],
+            "support": {
+                "issues": "https://github.com/schmittjoh/php-option/issues",
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "5bbc823adecdae860bb64756d639ecfec17b050a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/5bbc823adecdae860bb64756d639ecfec17b050a",
+                "reference": "5bbc823adecdae860bb64756d639ecfec17b050a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-ctype": "*"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.27-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.27.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-11-03T14:55:06+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.27-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-11-03T14:55:06+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php80",
+            "version": "v1.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+                "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.27-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.27.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-11-03T14:55:06+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v5.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
+                "reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcre": "*",
+                "graham-campbell/result-type": "^1.0.2",
+                "php": "^7.1.3 || ^8.0",
+                "phpoption/phpoption": "^1.8",
+                "symfony/polyfill-ctype": "^1.23",
+                "symfony/polyfill-mbstring": "^1.23.1",
+                "symfony/polyfill-php80": "^1.23.1"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4.1",
+                "ext-filter": "*",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.30 || ^9.5.25"
+            },
+            "suggest": {
+                "ext-filter": "Required to use the boolean validator."
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": true
+                },
+                "branch-alias": {
+                    "dev-master": "5.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "https://github.com/vlucas"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "support": {
+                "issues": "https://github.com/vlucas/phpdotenv/issues",
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-10-16T01:01:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.7"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }

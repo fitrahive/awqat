@@ -1,0 +1,112 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5deb2
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Waktu pembuatan: 04 Jul 2023 pada 00.08
+-- Versi server: 10.3.38-MariaDB-0ubuntu0.20.04.1
+-- Versi PHP: 7.4.33
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `awqat`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int(11) NOT NULL,
+  `key` varchar(64) NOT NULL,
+  `value` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `settings`
+--
+
+INSERT INTO `settings` (`id`, `key`, `value`) VALUES
+(1, 'name', 'Masjid Al-Jabbar'),
+(2, 'address', 'Jl. Cimincrang No. 14, Cimincrang, Kec. Gedebage, Kota Bandung, Jawa Barat 40292'),
+(3, 'method', 'Kemenag'),
+(4, 'adjustment.fajr', '0'),
+(5, 'adjustment.sunrise', '0'),
+(6, 'adjustment.dhuhr', '0'),
+(7, 'adjustment.asr', '0'),
+(8, 'adjustment.maghrib', '0'),
+(9, 'adjustment.isha', '0'),
+(10, 'iqamah.fajr', '10'),
+(11, 'iqamah.sunrise', '15'),
+(12, 'iqamah.dhuhr', '10'),
+(13, 'iqamah.asr', '10'),
+(14, 'iqamah.maghrib', '10'),
+(15, 'iqamah.isha', '10'),
+(16, 'theme', 'ar-rahman'),
+(17, 'language', 'indonesia'),
+(18, 'locale', 'id'),
+(19, 'adjustment.hijri', '0'),
+(20, 'label.fajr', 'Subuh'),
+(21, 'label.sunrise', 'Syuruq'),
+(22, 'label.dhuhr', 'Dzuhur'),
+(23, 'label.asr', 'Ashar'),
+(24, 'label.maghrib', 'Maghrib'),
+(25, 'label.isha', 'Isya');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `login` varchar(32) NOT NULL,
+  `name` int(255) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `password` int(180) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `settings`
+--
+ALTER TABLE `settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `login` (`login`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `settings`
+--
+ALTER TABLE `settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;

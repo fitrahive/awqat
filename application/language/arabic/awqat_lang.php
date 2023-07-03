@@ -35,8 +35,8 @@ $lang['october'] = 'أُكْتُوْبِرْ';
 $lang['november'] = 'نُوْفَمْبِرْ';
 $lang['december'] = 'دِيْسَمْبِرْ';
 
-$lang['imsak'] = 'إمساک';
 $lang['fajr'] = 'الفجر';
+$lang['sunrise'] = 'الشروق';
 $lang['dhuhr'] = 'الظهر';
 $lang['asr'] = 'العصر';
 $lang['maghrib'] = 'المغرب';

@@ -27,6 +27,8 @@ class Home extends BaseController
 			'adjustment.isha' => intval($this->settings('adjustment.isha')),
 			'locale' => $this->settings('locale'),
 			'adjustment.hijri' => intval($this->settings('adjustment.hijri')),
+			'latitude' => $this->settings('coordinate.latitude'),
+			'longitude' => $this->settings('coordinate.longitude'),
 		]);
 
 		$label = [

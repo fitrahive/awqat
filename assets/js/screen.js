@@ -1,4 +1,4 @@
-function sync(data = {}) {
+function method(data = {}) {
   if (data.method === 'Kemenag') {
     var params = adhan.CalculationMethod.Singapore();
 
@@ -8,48 +8,66 @@ function sync(data = {}) {
     params.adjustments.asr = 2 + data['adjustments.asr'];
     params.adjustments.maghrib = 2 + data['adjustments.maghrib'];
     params.adjustments.isha = 2 + data['adjustments.isha'];
-  } else {
-    var params = adhan.CalculationMethod[data.method]();
 
-    params.adjustments.fajr = data['adjustments.fajr'];
-    params.adjustments.sunrise = data['adjustments.sunrise'];
-    params.adjustments.dhuhr = data['adjustments.dhuhr'];
-    params.adjustments.asr = data['adjustments.asr'];
-    params.adjustments.maghrib = data['adjustments.maghrib'];
-    params.adjustments.isha = data['adjustments.isha'];
+    return params;
   }
 
-  var coordinates = new adhan.Coordinates(-6.5414161, 107.4550443);
+  var params = adhan.CalculationMethod[data.method]();
+
+  params.adjustments.fajr = data['adjustments.fajr'];
+  params.adjustments.sunrise = data['adjustments.sunrise'];
+  params.adjustments.dhuhr = data['adjustments.dhuhr'];
+  params.adjustments.asr = data['adjustments.asr'];
+  params.adjustments.maghrib = data['adjustments.maghrib'];
+  params.adjustments.isha = data['adjustments.isha'];
+
+  return params;
+}
+
+function sync(data = {}) {
+  var coordinates = new adhan.Coordinates(data.latitude, data.longitude);
   var date = moment().locale(data.locale).toDate();
-  var prayerTimes = new adhan.PrayerTimes(coordinates, date, params);
-  var nextDate = moment().add(1, 'day').locale(data.locale).toDate();
-  var nextPrayerTimes = new adhan.PrayerTimes(coordinates, nextDate, params);
+  var prayer = new adhan.PrayerTimes(coordinates, date, method(data));
+  var tomorrow = moment().add(1, 'day').locale(data.locale).toDate();
+  var nextPrayer = new adhan.PrayerTimes(coordinates, tomorrow, method(data));
 
-  $('#fajr').html(moment(prayerTimes.fajr).locale(data.locale).format('HH:mm'));
-  $('#sunrise').html(moment(prayerTimes.sunrise).locale(data.locale).format('HH:mm'));
-  $('#dhuhr').html(moment(prayerTimes.dhuhr).locale(data.locale).format('HH:mm'));
-  $('#asr').html(moment(prayerTimes.asr).locale(data.locale).format('HH:mm'));
-  $('#maghrib').html(moment(prayerTimes.maghrib).locale(data.locale).format('HH:mm'));
-  $('#isha').html(moment(prayerTimes.isha).locale(data.locale).format('HH:mm'));
+  var fajr = moment(prayer.fajr).locale(data.locale).format('HH:mm');
+  var sunrise = moment(prayer.sunrise).locale(data.locale).format('HH:mm');
+  var dhuhr = moment(prayer.dhuhr).locale(data.locale).format('HH:mm');
+  var asr = moment(prayer.asr).locale(data.locale).format('HH:mm');
+  var maghrib = moment(prayer.maghrib).locale(data.locale).format('HH:mm');
+  var isha = moment(prayer.isha).locale(data.locale).format('HH:mm');
 
-  $('#'.concat(prayerTimes.currentPrayer())).parent().css('color', 'var(--active-color)');
+  $('#fajr').html(fajr);
+  $('#sunrise').html(sunrise);
+  $('#dhuhr').html(dhuhr);
+  $('#asr').html(asr);
+  $('#maghrib').html(maghrib);
+  $('#isha').html(isha);
 
-  if (prayerTimes.nextPrayer() !== 'none') {
-    var name = $('#'.concat(prayerTimes.nextPrayer())).siblings().first().text();
-    var time = moment(prayerTimes[prayerTimes.nextPrayer()]).locale(data.locale).format('HH:mm');
+  $('#'.concat(prayer.currentPrayer())).parent().css('color', 'var(--active-color)');
+
+  if (prayer.nextPrayer() !== 'none') {
+    var name = $('#'.concat(prayer.nextPrayer())).siblings().first().text();
+    var time = moment(prayer[prayer.nextPrayer()]).locale(data.locale).format('HH:mm');
 
     $('#next > span').html(name.concat(' '.concat(time)));
   } else {
-    var name = $('#'.concat(nextPrayerTimes.nextPrayer())).siblings().first().text();
-    var time = moment(nextPrayerTimes[nextPrayerTimes.nextPrayer()]).locale(data.locale).format('HH:mm');
+    var name = $('#'.concat(nextPrayer.nextPrayer())).siblings().first().text();
+    var time = moment(nextPrayer[nextPrayer.nextPrayer()]).locale(data.locale).format('HH:mm');
 
     $('#next > span').html(name.concat(' '.concat(time)));
   }
 
-  $('#day').html(moment().locale(data.locale).format('dddd').replace('Minggu', 'Ahad'));
-  $('#masehi').html(moment().locale(data.locale).format('DD MMMM YYYYY') + ' M');
-  $('#hijri').html(moment().locale(data.locale).add(data['adjustment.hijri'], 'days').format('iDD iMMMM iYYYY') + ' H');
-  $('#clock').html(moment().locale(data.locale).format('HH:mm:ss'));
+  var day = moment().locale(data.locale).format('dddd').replace('Minggu', 'Ahad');
+  var masehi = moment().locale(data.locale).format('DD MMMM YYYYY') + ' M';
+  var hijri = moment().locale(data.locale).add(data['adjustment.hijri'], 'days').format('iDD iMMMM iYYYY') + ' H';
+  var clock = moment().locale(data.locale).format('HH:mm:ss');
+
+  $('#day').html(day);
+  $('#masehi').html(masehi);
+  $('#hijri').html(hijri);
+  $('#clock').html(clock);
 }
 
 function init() {
@@ -65,7 +83,7 @@ function init() {
     direction: 'left',
     allowCss3Support: true,
     easing: 'linear',
-    gap: '5'
+    gap: '10'
   });
 }
 

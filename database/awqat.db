@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 04 Jul 2023 pada 00.08
+-- Waktu pembuatan: 04 Jul 2023 pada 20.59
 -- Versi server: 10.3.38-MariaDB-0ubuntu0.20.04.1
 -- Versi PHP: 7.4.33
 
@@ -15,6 +15,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `awqat`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `quotes`
+--
+
+CREATE TABLE `quotes` (
+  `id` int(11) NOT NULL,
+  `quote` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `quotes`
+--
+
+INSERT INTO `quotes` (`id`, `quote`) VALUES
+(1, 'Please follow health protocols to prevent the spread of COVID-19'),
+(2, 'Turn off the phone or use silent mode while in the mosque area'),
+(3, 'This is running text section and you can change this on the Masajid Dashboard');
 
 -- --------------------------------------------------------
 
@@ -42,22 +62,18 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 (7, 'adjustment.asr', '0'),
 (8, 'adjustment.maghrib', '0'),
 (9, 'adjustment.isha', '0'),
-(10, 'iqamah.fajr', '10'),
-(11, 'iqamah.sunrise', '15'),
-(12, 'iqamah.dhuhr', '10'),
-(13, 'iqamah.asr', '10'),
-(14, 'iqamah.maghrib', '10'),
-(15, 'iqamah.isha', '10'),
-(16, 'theme', 'ar-rahman'),
-(17, 'language', 'indonesia'),
-(18, 'locale', 'id'),
-(19, 'adjustment.hijri', '0'),
-(20, 'label.fajr', 'Subuh'),
-(21, 'label.sunrise', 'Syuruq'),
-(22, 'label.dhuhr', 'Dzuhur'),
-(23, 'label.asr', 'Ashar'),
-(24, 'label.maghrib', 'Maghrib'),
-(25, 'label.isha', 'Isya');
+(10, 'theme', 'al-hikmah'),
+(11, 'language', 'indonesia'),
+(12, 'locale', 'id'),
+(13, 'adjustment.hijri', '0'),
+(14, 'label.fajr', 'Subuh'),
+(15, 'label.sunrise', 'Syuruq'),
+(16, 'label.dhuhr', 'Dzuhur'),
+(17, 'label.asr', 'Ashar'),
+(18, 'label.maghrib', 'Maghrib'),
+(19, 'label.isha', 'Isya'),
+(20, 'coordinate.latitude', '-6.5414161'),
+(21, 'coordinate.longitude', '107.4550443');
 
 -- --------------------------------------------------------
 
@@ -68,17 +84,30 @@ INSERT INTO `settings` (`id`, `key`, `value`) VALUES
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `login` varchar(32) NOT NULL,
-  `name` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `email` varchar(320) NOT NULL,
-  `password` int(180) NOT NULL,
+  `password` varchar(180) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `name`, `email`, `password`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'admin', 'Fitrahive', 'fitrahive+awqat@sesulih.my.id', '$2y$10$g8IV/sv9yv3OVUTmMxzD0ufhqObTMQWKQ.qotBDeq3aWNO1H35tu6', '2023-07-04 20:58:18', NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `quotes`
+--
+ALTER TABLE `quotes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `settings`
@@ -99,14 +128,20 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `quotes`
+--
+ALTER TABLE `quotes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT untuk tabel `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;

@@ -37,6 +37,19 @@ Take control of your mosque screens
 6. Export (or copy paste contents into SQL tab) [`awqat.db`](./database/awqat.db) to your own database.
 7. MasyaAllah!
 
+## Usage
+
+1. Open it (could be [http://localhost/awqat/screen](http://localhost/awqat/screen)) in a browser
+2. Enter username and password, by default it is:
+
+   ```
+   Username : admin
+   Password : awqat
+   ```
+
+3. You can customize everything!
+4. Alhamdulillah
+
 ## Features
 
 - [x] Offline

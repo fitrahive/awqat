@@ -22,8 +22,8 @@
 
 <body class="screen" style="background-image: url(<?= base_url('assets/img/medina.jpg') ?>)">
 	<header class="w-100 bg-sky-950/[.7] text-white p-8 flex justify-between items-center">
-		<div class="flex flex-col justify-between divide-y-2 divide-gray-400 gap-3 text-xl grow-0 shrink-0 basis-[20%]">
-			<div class="flex flex-col">
+		<div class="flex flex-col justify-between divide-y-2 divide-gray-400 gap-3 text-[3vh] grow-0 shrink-0 basis-[25%]">
+			<div class="flex flex-col leading-tight">
 				<span id="day">Senin</span>
 				<span id="masehi">01 Januari 2023 M</span>
 			</div>
@@ -33,12 +33,12 @@
 			</div>
 		</div>
 
-		<div class="flex flex-col items-center gap-2 grow-0 shrink-0 basis-[60%]">
-			<h1 class="text-7xl uppercase font-['Jacques_Francois'] mb-4"><?= $name ?></h1>
-			<p class="text-lg mb-0 text-gray-300"><?= $address ?></p>
+		<div class="flex flex-col items-center gap-2 grow-0 shrink-0 basis-[50%]">
+			<h1 class="text-[7vh] uppercase font-['Jacques_Francois'] mb-4"><?= $name ?></h1>
+			<p class="text-[2vh] mb-0 text-gray-300"><?= $address ?></p>
 		</div>
 
-		<div class="text-6xl grow-0 shrink-0 basis-[20%] text-right">
+		<div class="text-[6vh] grow-0 shrink-0 basis-[25%] text-right">
 			<span id="clock">00:00:00</span>
 		</div>
 	</header>
@@ -47,20 +47,20 @@
 		<section id="prayer-times" class="px-8 w-screen grid grid-cols-6 gap-4 fixed top-[23vh]">
 			<?php foreach (shalat() as $key) : ?>
 				<div class="p-4 bg-[#F2F2F2]/[.85] rounded-lg flex flex-col items-center drop-shadow-lg text-[#FFFEF9]">
-					<small class="text-2xl font-extrabold drop-shadow-lg"><?= $label[$key] ?></small>
-					<span class="text-4xl font-medium drop-shadow-lg" id="<?= $key ?>">00:00</span>
+					<small class="text-[3.5vh] font-extrabold leading-normal drop-shadow-lg"><?= $label[$key] ?></small>
+					<span class="text-[7vh] font-medium drop-shadow-lg" id="<?= $key ?>">00:00</span>
 				</div>
 			<?php endforeach ?>
 		</section>
 
 		<section id="current" class="fixed bottom-[10vh] right-8 mx-auto inset-x-0 flex justify-end">
 			<div class="py-5 px-6 bg-[#2C4866]/[.8] rounded-lg backdrop-blur-sm" id="next">
-				<span class="text-3xl font-medium"><?= $label['fajr'] ?> 00:00</span>
+				<span class="text-[3.5vh] font-medium"><?= $label['fajr'] ?> 00:00</span>
 			</div>
 		</section>
 	</main>
 
-	<footer class="fixed bottom-0 p-4 bg-white/[.6] whitespace-nowrap w-full text-xl">
+	<footer class="fixed bottom-0 p-4 bg-white/[.6] whitespace-nowrap w-full text-[4vh]">
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis debitis harum a
 			doloribus! Ut vero exercitationem eaque blanditiis? Sequi facere illum aspernatur

@@ -50,3 +50,10 @@ body.screen {
   background-repeat: no-repeat;
   @apply h-screen w-screen overflow-hidden leading-none font-['Inter'] cursor-none;
 }
+
+.header-login {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--header-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

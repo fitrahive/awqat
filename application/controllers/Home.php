@@ -62,6 +62,6 @@ class Home extends BaseController
 			return redirect('screen/profile');
 		}
 
-		return redirect('auth/login');
+		return redirect('screen/login');
 	}
 }

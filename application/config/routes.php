@@ -57,8 +57,8 @@ $route['translate_uri_dashes'] = false;
 
 $route['screen']['GET'] = 'home/screen';
 
-$route['auth/login']['GET'] = 'app/auth';
-$route['auth/login']['POST'] = 'app/auth/process';
+$route['screen/login']['GET'] = 'app/login';
+$route['screen/login']['POST'] = 'app/login/process';
 
 // disable auto route
 $route['(.*)'] = 'none';

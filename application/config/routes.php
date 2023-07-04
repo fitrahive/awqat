@@ -59,6 +59,7 @@ $route['screen']['GET'] = 'home/screen';
 
 $route['screen/login']['GET'] = 'app/login';
 $route['screen/login']['POST'] = 'app/login/process';
+$route['screen/logout']['GET'] = 'app/login/logout';
 
 // disable auto route
 $route['(.*)'] = 'none';

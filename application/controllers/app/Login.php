@@ -78,4 +78,10 @@ class Login extends BaseController
 		$this->session->set_flashdata('success', 'Assalamu\'alaikum akhy!');
 		return redirect('screen/profile');
 	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		return redirect('screen/login');
+	}
 }

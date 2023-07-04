@@ -18,7 +18,7 @@
 <body class="bg-[#FEFEFE] min-w-screen min-h-screen overflow-x-hidden">
 	<div class="w-full h-full flex flex-col xl:flex-row">
 		<section class="w-full h-[35vh] header-login flex justify-center items-center min-h-[175px] xl:h-screen">
-			<img class="max-w-[65%] xl:max-w-sm" src="" alt="Logo">
+			<img class="max-w-[65%] xl:max-w-sm" src="<?= base_url('assets/img/logo.png') ?>" alt="Logo">
 		</section>
 
 		<section class="w-full h-[65vh] flex items-center min-h-[250px] overflow-auto xl:h-screen">

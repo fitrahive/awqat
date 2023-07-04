@@ -1,6 +1,4 @@
-# Awqat 🕌
-
-Take control of your mosque screens
+![Awqat by Fitrahive](./assets/img/banner.png)
 
 ## Requirements
 

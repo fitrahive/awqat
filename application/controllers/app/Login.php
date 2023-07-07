@@ -14,7 +14,7 @@ class Login extends BaseController
 	public function index()
 	{
 		if ($this->session->userdata('logged')) {
-			return redirect('screen/profile');
+			return redirect('screen/account');
 		}
 
 		$csrf = [
@@ -76,7 +76,7 @@ class Login extends BaseController
 		]);
 
 		$this->session->set_flashdata('success', 'Assalamu\'alaikum akhy!');
-		return redirect('screen/profile');
+		return redirect('screen/account');
 	}
 
 	public function logout()

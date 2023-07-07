@@ -3,18 +3,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends BaseController
 {
+	public Quotes_model $quotes;
+
 	public function __construct()
 	{
 		parent::__construct();
-
 		$this->load->helper('screen');
 	}
 
 	public function index()
 	{
+		$this->load->model('Quotes_model', 'quotes');
+
 		$name = $this->settings('name');
 		$address = $this->settings('address');
 		$theme = $this->settings('theme');
+		$quotes = array_map(fn ($item) => $item->quote, $this->quotes->all());
 
 		$json = json_encode([
 			'shalat' => shalat(),
@@ -45,6 +49,7 @@ class Home extends BaseController
 			'address' => $address,
 			'json' => $json,
 			'label' => $label,
+			'quotes' => $quotes,
 		]);
 	}
 

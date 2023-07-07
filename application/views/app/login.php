@@ -17,12 +17,12 @@
 
 <body class="bg-[#FEFEFE] min-w-screen min-h-screen overflow-x-hidden">
 	<div class="w-full h-full flex flex-col xl:flex-row">
-		<section class="w-full h-[35vh] header-login flex justify-center items-center min-h-[175px] xl:h-screen">
-			<img class="max-w-[65%] xl:max-w-sm" src="<?= base_url('assets/img/logo.png') ?>" alt="Logo">
+		<section class="w-full h-[40vh] header-login flex justify-center items-center min-h-[160px] xl:h-screen p-5">
+			<img class="w-full max-w-[240px] xl:max-w-[450px]" src="<?= base_url('assets/img/logo.png') ?>" alt="Awqat Logo">
 		</section>
 
-		<section class="w-full h-[65vh] flex items-center min-h-[250px] overflow-auto xl:h-screen">
-			<div class="relative w-full max-w-sm xl:max-w-lg mx-auto my-6 p-3 xl:p-0">
+		<section class="w-full h-[60vh] flex items-center min-h-[250px] overflow-auto xl:h-screen">
+			<div class="relative w-full max-w-[85vw] xl:max-w-lg mx-auto my-6">
 				<form action="<?= current_url() ?>" method="POST">
 					<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
 
@@ -52,8 +52,8 @@
 						</div>
 					</div>
 
-					<div class="mb-0 text-right">
-						<button class="bg-sky-500 hover:bg-sky-700 px-5 py-2.5 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
+					<div class="mb-0">
+						<button class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
 							Login
 						</button>
 					</div>

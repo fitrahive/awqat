@@ -57,3 +57,7 @@ body.screen {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.own-shadow {
+  box-shadow: 0 0.25rem 1.75rem rgba(30, 34, 40, 0.07);
+}

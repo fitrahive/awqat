@@ -61,11 +61,7 @@
 	</main>
 
 	<footer class="fixed bottom-0 p-4 bg-white/[.6] whitespace-nowrap w-full text-[4vh]">
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis debitis harum a
-			doloribus! Ut vero exercitationem eaque blanditiis? Sequi facere illum aspernatur
-			doloremque esse assumenda nihil eum ducimus quo quas!
-		</p>
+		<p><?= implode(' • ', $quotes) ?> • </p>
 	</footer>
 
 	<script src="<?= base_url('assets/js/HackTimer.silent.min.js') ?>"></script>

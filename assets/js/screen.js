@@ -161,25 +161,27 @@ function sync(data) {
     method: "GET",
     url: window.location.href + "/sync",
     success: function (update) {
-      if ("theme" in data && data.theme !== update.theme) {
-        localStorage.setItem("data", JSON.stringify(update));
-        $("#reload").removeClass("hidden");
+      if (data !== null) {
+        if ("theme" in data && data.theme !== update.theme) {
+          localStorage.setItem("data", JSON.stringify(update));
+          $("#reload").removeClass("hidden");
 
-        return window.location.reload();
+          return window.location.reload();
+        }
+
+        // update mosque name and address
+        handleMosque(
+          {
+            name: "name" in data ? data.name : "",
+            address: "address" in data ? data.address : "",
+          },
+          { name: update.name, address: update.address }
+        );
+        // update prayer times label
+        handleLabel("label" in data ? data.label : {}, update.label);
+        // update running text
+        handleQuotes("quotes" in data ? data.quotes : {}, update.quotes);
       }
-
-      // update mosque name and address
-      handleMosque(
-        {
-          name: "name" in data ? data.name : "",
-          address: "address" in data ? data.address : "",
-        },
-        { name: update.name, address: update.address }
-      );
-      // update prayer times label
-      handleLabel("label" in data ? data.label : {}, update.label);
-      // update running text
-      handleQuotes("quotes" in data ? data.quotes : {}, update.quotes);
 
       localStorage.setItem("data", JSON.stringify(update));
       sync(update);

@@ -32,7 +32,7 @@
    ```
 
 5. Copy `.env.example` file to `.env` and customize contents!
-6. Export (or copy paste contents into SQL tab) [`awqat.db`](./database/awqat.db) to your own database.
+6. Export (or copy paste contents into SQL tab) [`awqat.sql`](./database/awqat.sql) to your own database.
 7. MasyaAllah!
 
 ## Usage

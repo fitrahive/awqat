@@ -183,6 +183,16 @@ function sync(data) {
 }
 
 function init() {
+  var screenWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  if (screenWidth < 1024) {
+    window.location.href = window.location.href + "/screen";
+    return;
+  }
+
   var data = JSON.parse(localStorage.getItem("data"));
 
   // initializing mosque name and address

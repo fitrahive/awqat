@@ -23,7 +23,7 @@
 					<?php endif ?>
 
 					<div class="mb-6">
-						<label for="username" class="blockfont-medium text-slate-700 cursor-pointer">
+						<label for="username" class="block font-medium text-slate-700 cursor-pointer">
 							Username
 						</label>
 
@@ -33,7 +33,7 @@
 					</div>
 
 					<div class="mb-6">
-						<label for="password" class="blockfont-medium text-slate-700 cursor-pointer">
+						<label for="password" class="block font-medium text-slate-700 cursor-pointer">
 							Password
 						</label>
 

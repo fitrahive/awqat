@@ -61,13 +61,22 @@ $route['screen/login']['GET'] = 'app/login';
 $route['screen/login']['POST'] = 'app/login/process';
 $route['screen/logout']['GET'] = 'app/login/logout';
 
-$route['screen/account']['GET'] = 'app/account';
-$route['screen/account']['POST'] = 'app/account/process';
+$route['screen/settings']['GET'] = 'app/settings';
+$route['screen/settings']['POST'] = 'app/settings/process';
+
+$route['screen/localization']['GET'] = 'app/localization';
+$route['screen/localization']['POST'] = 'app/localization/process';
+
+$route['screen/themes']['GET'] = 'app/themes';
+$route['screen/themes']['POST'] = 'app/themes/process';
 
 $route['screen/quotes']['GET'] = 'app/quotes';
 $route['screen/quotes']['POST'] = 'app/quotes/insert';
 $route['screen/quotes/update/(:num)']['POST'] = 'app/quotes/update/$1';
 $route['screen/quotes/delete/(:num)']['GET'] = 'app/quotes/delete/$1';
+
+$route['screen/account']['GET'] = 'app/account';
+$route['screen/account']['POST'] = 'app/account/process';
 
 // disable auto route
 $route['(.*)'] = 'none';

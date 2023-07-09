@@ -17,6 +17,12 @@ class BaseModel extends CI_Model
 		return $method + '_array';
 	}
 
+	public function where($field, $value)
+	{
+		$this->db->where($field, $value);
+		return $this;
+	}
+
 	public function all()
 	{
 		if ($this->useSoftDeletes) {
@@ -57,9 +63,13 @@ class BaseModel extends CI_Model
 		return $this->db->insert($this->table, $data);
 	}
 
-	public function update($id, $data)
+	public function update($id, $data = [])
 	{
-		$this->db->where('id', $id);
+		if (gettype($id) !== 'array') {
+			$this->db->where('id', $id);
+		} else {
+			$data = $id;
+		}
 
 		if ($this->useSoftDeletes) {
 			$this->db->where('deleted_at IS NULL', null, false);
@@ -68,9 +78,11 @@ class BaseModel extends CI_Model
 		return $this->db->update($this->table, $data);
 	}
 
-	public function delete($id)
+	public function delete($id = null)
 	{
-		$this->db->where('id', $id);
+		if ($id) {
+			$this->db->where('id', $id);
+		}
 
 		if ($this->useSoftDeletes) {
 			$this->db->where('deleted_at IS NULL', null, false);

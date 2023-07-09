@@ -7,17 +7,14 @@
 
 			<div class="overflow-x-auto">
 				<ul class="flex px-4">
-					<li class="p-4 shrink-0" <?= current_url() === base_url('screen/profile') ? 'font-semibold' : '' ?>>
-						<a up-target="main" href="<?= base_url('screen/profile') ?>">Masjid Profile</a>
+					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/settings') ? 'font-semibold' : '' ?>">
+						<a up-target="main" href="<?= base_url('screen/settings') ?>">Mosque Settings</a>
 					</li>
-					<li class="p-4 shrink-0" <?= current_url() === base_url('screen/times') ? 'font-semibold' : '' ?>>
-						<a up-target="main" href="<?= base_url('screen/times') ?>">Prayer Times</a>
+					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/localization') ? 'font-semibold' : '' ?>">
+						<a up-target="main" href="<?= base_url('screen/localization') ?>">Localization</a>
 					</li>
 					<li class="p-4 shrink-0" <?= current_url() === base_url('screen/themes') ? 'font-semibold' : '' ?>>
-						<a up-target="main" href="<?= base_url('screen/themes') ?>">Layout Style</a>
-					</li>
-					<li class="p-4 shrink-0" <?= current_url() === base_url('screen/locales') ? 'font-semibold' : '' ?>>
-						<a up-target="main" href="<?= base_url('screen/locales') ?>">Localization</a>
+						<a up-target="main" href="<?= base_url('screen/themes') ?>">Themes</a>
 					</li>
 					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/quotes') ? 'font-semibold' : '' ?>">
 						<a up-target="main" href="<?= base_url('screen/quotes') ?>">Running Text</a>

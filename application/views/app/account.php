@@ -11,8 +11,8 @@
 
 		<section class="max-w-[90rem] mx-auto w-full">
 			<div class="flex flex-col lg:flex-row gap-8 xl:px-4 py-8">
-				<div class="h-fit basis-1/2 own-shadow xl:rounded-lg">
-					<div class="px-8 py-4 border-b">
+				<div class="h-fit basis-1/2 xl:rounded-lg border">
+					<div class="px-8 py-4 border-b ">
 						<h4 class="text-lg font-medium">Profile</h4>
 					</div>
 
@@ -31,7 +31,7 @@
 						<?php endif ?>
 
 						<div class="mb-6">
-							<label for="username" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="username" class="block font-medium text-slate-700 cursor-pointer">
 								Username
 							</label>
 
@@ -41,7 +41,7 @@
 						</div>
 
 						<div class="mb-6">
-							<label for="name" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="name" class="block font-medium text-slate-700 cursor-pointer">
 								Name
 							</label>
 
@@ -51,7 +51,7 @@
 						</div>
 
 						<div class="mb-6">
-							<label for="email" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="email" class="block font-medium text-slate-700 cursor-pointer">
 								Email
 							</label>
 
@@ -60,15 +60,15 @@
 							</div>
 						</div>
 
-						<div class="mb-0">
-							<button name="profile" value="1" class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
+						<div class="mt-4 lg:mt-0 lg:flex lg:justify-end mb-0">
+							<button type="submit" name="profile" value="1" class="w-full py-3 lg:w-fit lg:px-5 bg-sky-500 hover:bg-sky-700 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
 								Save
 							</button>
 						</div>
 					</form>
 				</div>
 
-				<div class="h-fit basis-1/2 own-shadow xl:rounded-lg">
+				<div class="h-fit basis-1/2 xl:rounded-lg border">
 					<div class="px-8 py-4 border-b">
 						<h4 class="text-lg font-medium">Change Password</h4>
 					</div>
@@ -88,7 +88,7 @@
 						<?php endif ?>
 
 						<div class="mb-6">
-							<label for="current" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="current" class="block font-medium text-slate-700 cursor-pointer">
 								Current Password
 							</label>
 
@@ -98,7 +98,7 @@
 						</div>
 
 						<div class="mb-6">
-							<label for="new" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="new" class="block font-medium text-slate-700 cursor-pointer">
 								New Password
 							</label>
 
@@ -108,7 +108,7 @@
 						</div>
 
 						<div class="mb-6">
-							<label for="confirm" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="confirm" class="block font-medium text-slate-700 cursor-pointer">
 								Confirm New Password
 							</label>
 
@@ -117,8 +117,8 @@
 							</div>
 						</div>
 
-						<div class="mb-0">
-							<button name="password" value="1" class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
+						<div class="mt-4 lg:mt-0 lg:flex lg:justify-end mb-0">
+							<button type="submit" name="password" value="1" class="w-full py-3 lg:w-fit lg:px-5 bg-sky-500 hover:bg-sky-700 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
 								Save
 							</button>
 						</div>

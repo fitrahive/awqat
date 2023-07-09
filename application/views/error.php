@@ -14,7 +14,7 @@
 	<div class="h-screen font-['Inter'] font-bold flex flex-col justify-center items-center">
 		<h1 class="text-3xl">An Error Occured</h1>
 		<h1 class="text-3xl mb-3"><span class="ascii">(╯°□°）╯︵ ┻━┻</span></h1>
-		<a class="text-blue-700 hover:text-blue-800" href="<?= base_url() ?>">Go back</a>
+		<a class="text-blue-700 hover:text-blue-800" href="javascript:window.history.go(-1)">Go back</a>
 	</div>
 </body>
 

@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class BaseController extends CI_Controller
 {
+	public $db;
 	public CI_Input $input;
 	public CI_Output $output;
 	public CI_Upload $upload;

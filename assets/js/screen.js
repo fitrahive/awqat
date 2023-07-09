@@ -101,40 +101,40 @@ function realtime() {
 
 function handleMosque(current, update) {
   // mosque name
-  if (current.name !== update.name) {
+  if (!("name" in current) || current.name !== update.name) {
     $("title").html(update.name);
     $("h1").html(update.name);
   }
 
   // mosque address
-  if (current.address !== update.address) {
+  if (!("address" in current) || current.address !== update.address) {
     $("h1 + p").html(update.address);
   }
 }
 
 // label for prayer times
 function handleLabel(current, update) {
-  if (current.fajr !== update.fajr) {
+  if (!("fajr" in current) || current.fajr !== update.fajr) {
     $("#fajr").parent().find("small").html(update.fajr);
   }
 
-  if (current.sunrise !== update.sunrise) {
+  if (!("sunrise" in current) || current.sunrise !== update.sunrise) {
     $("#sunrise").parent().find("small").html(update.sunrise);
   }
 
-  if (current.dhuhr !== update.dhuhr) {
+  if (!("dhuhr" in current) || current.dhuhr !== update.dhuhr) {
     $("#dhuhr").parent().find("small").html(update.dhuhr);
   }
 
-  if (current.asr !== update.asr) {
+  if (!("asr" in current) || current.asr !== update.asr) {
     $("#asr").parent().find("small").html(update.asr);
   }
 
-  if (current.maghrib !== update.maghrib) {
+  if (!("maghrib" in current) || current.maghrib !== update.maghrib) {
     $("#maghrib").parent().find("small").html(update.maghrib);
   }
 
-  if (current.isha !== update.isha) {
+  if (!("isha" in current) || current.isha !== update.isha) {
     $("#isha").parent().find("small").html(update.isha);
   }
 }
@@ -161,7 +161,7 @@ function sync(data) {
     method: "GET",
     url: window.location.href + "/sync",
     success: function (update) {
-      if (data.theme !== update.theme) {
+      if ("theme" in data && data.theme !== update.theme) {
         localStorage.setItem("data", JSON.stringify(update));
         $("#reload").removeClass("hidden");
 
@@ -170,13 +170,16 @@ function sync(data) {
 
       // update mosque name and address
       handleMosque(
-        { name: data.name, address: data.address },
+        {
+          name: "name" in data ? data.name : "",
+          address: "address" in data ? data.address : "",
+        },
         { name: update.name, address: update.address }
       );
       // update prayer times label
-      handleLabel(data.label, update.label);
+      handleLabel("label" in data ? data.label : {}, update.label);
       // update running text
-      handleQuotes(data.quotes, update.quotes);
+      handleQuotes("quotes" in data ? data.quotes : {}, update.quotes);
 
       localStorage.setItem("data", JSON.stringify(update));
       sync(update);

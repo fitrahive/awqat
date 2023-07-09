@@ -69,7 +69,7 @@ $route['screen/localization']['GET'] = 'app/localization';
 $route['screen/localization']['POST'] = 'app/localization/process';
 
 $route['screen/themes']['GET'] = 'app/themes';
-$route['screen/themes']['POST'] = 'app/themes/process';
+$route['screen/themes/(:any)']['GET'] = 'app/themes/change/$1';
 
 $route['screen/quotes']['GET'] = 'app/quotes';
 $route['screen/quotes']['POST'] = 'app/quotes/insert';

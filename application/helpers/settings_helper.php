@@ -87,3 +87,14 @@ function locale($value = null)
 
 	return $value ? $locales[$value] : $locales;
 }
+
+function theme($name = null)
+{
+	$themes = [
+		'ar-rahman' => 'Ar-Rahman',
+		'an-nur' => 'An-Nur',
+		'al-hikmah' => 'Al-Hikmah',
+	];
+
+	return $name ? $themes[$name] : $themes;
+}

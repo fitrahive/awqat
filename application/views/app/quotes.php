@@ -83,8 +83,6 @@
 						<h3 class="mb-4 text-xl font-medium text-gray-900">Add Running Text</h3>
 
 						<form class="space-y-4" action="<?= current_url() ?>" method="POST" up-target="main">
-							<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
-
 							<div>
 								<input type="text" name="quote" id="quote" class="px-3 py-2.5 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none transition duration-100 ease-linear" placeholder="Input your text here" required="">
 							</div>

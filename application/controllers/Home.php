@@ -8,20 +8,38 @@ class Home extends BaseController
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('Quotes_model', 'quotes');
 		$this->load->helper('screen');
 	}
 
 	public function index()
 	{
-		$this->load->model('Quotes_model', 'quotes');
+		$theme = $this->settings('theme');
+		$this->load->view('templates/' . $theme);
+	}
 
+	public function sync()
+	{
 		$name = $this->settings('name');
 		$address = $this->settings('address');
 		$theme = $this->settings('theme');
 		$quotes = array_map(fn ($item) => $item->quote, $this->quotes->all());
 
-		$json = json_encode([
-			'shalat' => shalat(),
+		$label = [
+			'fajr' => $this->settings('label.fajr'),
+			'sunrise' => $this->settings('label.sunrise'),
+			'dhuhr' => $this->settings('label.dhuhr'),
+			'asr' => $this->settings('label.asr'),
+			'maghrib' => $this->settings('label.maghrib'),
+			'isha' => $this->settings('label.isha'),
+		];
+
+		$result = [
+			'name' => $name,
+			'address' => $address,
+			'theme' => $theme,
+			'quotes' => $quotes,
+			'label' => $label,
 			'method' => $this->settings('method'),
 			'adjustment.fajr' => intval($this->settings('adjustment.fajr')),
 			'adjustment.sunrise' => intval($this->settings('adjustment.sunrise')),
@@ -33,24 +51,10 @@ class Home extends BaseController
 			'adjustment.hijri' => intval($this->settings('adjustment.hijri')),
 			'latitude' => $this->settings('coordinate.latitude'),
 			'longitude' => $this->settings('coordinate.longitude'),
-		]);
-
-		$label = [
-			'fajr' => $this->settings('label.fajr'),
-			'sunrise' => $this->settings('label.sunrise'),
-			'dhuhr' => $this->settings('label.dhuhr'),
-			'asr' => $this->settings('label.asr'),
-			'maghrib' => $this->settings('label.maghrib'),
-			'isha' => $this->settings('label.isha'),
 		];
 
-		$this->load->view('templates/' . $theme, [
-			'name' => $name,
-			'address' => $address,
-			'json' => $json,
-			'label' => $label,
-			'quotes' => $quotes,
-		]);
+		header('Content-Type: application/json');
+		die(json_encode($result));
 	}
 
 	public function switch($language = '')
@@ -64,7 +68,7 @@ class Home extends BaseController
 	public function screen()
 	{
 		if ($this->session->userdata('logged')) {
-			return redirect('screen/profile');
+			return redirect('screen/settings');
 		}
 
 		return redirect('screen/login');

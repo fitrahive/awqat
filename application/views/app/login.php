@@ -14,8 +14,6 @@
 		<section class="w-full h-[60vh] flex items-center min-h-[250px] overflow-auto xl:h-screen">
 			<div class="relative w-full max-w-[85vw] xl:max-w-lg mx-auto my-6">
 				<form action="<?= current_url() ?>" method="POST">
-					<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
-
 					<?php if ($this->session->flashdata('failed')) : ?>
 						<div class="mb-6 p-4 text-sm text-red-800 font-semibold rounded-lg bg-red-50" role="alert">
 							<?= $this->session->flashdata('failed') ?>

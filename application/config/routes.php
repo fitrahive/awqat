@@ -55,6 +55,7 @@ $route['404_override'] = 'override/notfound';
 $route['500_override'] = 'override/server';
 $route['translate_uri_dashes'] = false;
 
+$route['sync']['GET'] = 'home/sync';
 $route['screen']['GET'] = 'home/screen';
 
 $route['screen/login']['GET'] = 'app/login';

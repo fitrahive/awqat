@@ -23,8 +23,6 @@
 				<?php endif ?>
 
 				<form class="mt-4" action="<?= current_url() ?>" method="POST" up-target="main">
-					<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
-
 					<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
 						<div class="col-span-1">
 							<div class="mb-6">

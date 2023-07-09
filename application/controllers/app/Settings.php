@@ -16,11 +16,6 @@ class Settings extends BaseController
 
 	public function index()
 	{
-		$csrf = [
-			'name' => $this->security->get_csrf_token_name(),
-			'hash' => $this->security->get_csrf_hash()
-		];
-
 		$settings =  [
 			'name' => $this->settings('name'),
 			'address' => $this->settings('address'),
@@ -32,7 +27,6 @@ class Settings extends BaseController
 
 		$this->load->view('app/settings', [
 			'page' => 'Mosque Settings',
-			'csrf' => $csrf,
 			'settings' => $settings,
 		]);
 	}

@@ -15,15 +15,9 @@ class Quotes extends BaseController
 	{
 		$quotes = $this->quotes->all();
 
-		$csrf = [
-			'name' => $this->security->get_csrf_token_name(),
-			'hash' => $this->security->get_csrf_hash()
-		];
-
 		$this->load->view('app/quotes', [
 			'page' => 'Running Text',
 			'quotes' => $quotes,
-			'csrf' => $csrf,
 		]);
 	}
 

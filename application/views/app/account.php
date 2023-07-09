@@ -17,8 +17,6 @@
 					</div>
 
 					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST" up-target="main">
-						<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
-
 						<?php if ($this->session->flashdata('failed-profile')) : ?>
 							<div class="mb-6 p-4 text-sm text-red-800 font-semibold rounded-lg bg-red-50" role="alert">
 								<?= $this->session->flashdata('failed-profile') ?>
@@ -74,8 +72,6 @@
 					</div>
 
 					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST" up-target="main">
-						<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
-
 						<?php if ($this->session->flashdata('failed-password')) : ?>
 							<div class="mb-6 p-4 text-sm text-red-800 font-semibold rounded-lg bg-red-50" role="alert">
 								<?= $this->session->flashdata('failed-password') ?>

@@ -2,17 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?= $page ?></title>
-
-	<link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
-
-	<style>
-		:root {
-			--header-image: url("<?= base_url('assets/img/medina.jpg') ?>");
-		}
-	</style>
+	<?php include 'partials/head.php' ?>
 </head>
 
 <body class="bg-[#FEFEFE] min-w-screen min-h-screen overflow-x-hidden">

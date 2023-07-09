@@ -64,5 +64,10 @@ $route['screen/logout']['GET'] = 'app/login/logout';
 $route['screen/account']['GET'] = 'app/account';
 $route['screen/account']['POST'] = 'app/account/process';
 
+$route['screen/quotes']['GET'] = 'app/quotes';
+$route['screen/quotes']['POST'] = 'app/quotes/insert';
+$route['screen/quotes/update/(:num)']['POST'] = 'app/quotes/update/$1';
+$route['screen/quotes/delete/(:num)']['GET'] = 'app/quotes/delete/$1';
+
 // disable auto route
 $route['(.*)'] = 'none';

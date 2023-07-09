@@ -5,6 +5,6 @@ class Quotes_model extends BaseModel
 {
 	protected string $table = 'quotes';
 	protected string $returnType = 'object';
-	protected bool $useTimestamps = false;
-	protected bool $useSoftDeletes = false;
+	protected bool $useTimestamps = true;
+	protected bool $useSoftDeletes = true;
 }

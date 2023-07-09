@@ -2,17 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?= $page ?></title>
-
-	<link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
-
-	<style>
-		:root {
-			--header-image: url("<?= base_url('assets/img/medina.jpg') ?>");
-		}
-	</style>
+	<?php include 'partials/head.php' ?>
 </head>
 
 <body class="antialiased bg-[#FEFEFE] min-w-screen min-h-screen overflow-x-hidden text-[#35321B] flex flex-col justify-between">
@@ -26,7 +16,7 @@
 						<h4 class="text-lg font-medium">Profile</h4>
 					</div>
 
-					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST">
+					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST" up-target="main">
 						<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
 
 						<?php if ($this->session->flashdata('failed-profile')) : ?>
@@ -83,7 +73,7 @@
 						<h4 class="text-lg font-medium">Change Password</h4>
 					</div>
 
-					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST">
+					<form class="p-8 pt-6" action="<?= current_url() ?>" method="POST" up-target="main">
 						<input type="hidden" name="<?= $csrf['name'] ?>" value="<?= $csrf['hash'] ?>">
 
 						<?php if ($this->session->flashdata('failed-password')) : ?>
@@ -139,8 +129,7 @@
 	</main>
 
 	<?php include 'partials/footer.php' ?>
-
-	<script src="<?= base_url('assets/js/app.js') ?>"></script>
+	<?php include 'partials/scripts.php' ?>
 </body>
 
 </html>

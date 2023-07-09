@@ -84,11 +84,11 @@ class Account extends BaseController
 
 			if ($update) {
 				$this->session->set_flashdata('success-profile', 'Profile updated successfully.');
-				return redirect('screen/account');
+				return redirect(current_url());
 			}
 
 			$this->session->set_flashdata('failed-profile', 'Profile failed to update.');
-			return redirect('screen/account');
+			return redirect(current_url());
 		}
 
 		if ($this->input->post('password')) {
@@ -145,11 +145,11 @@ class Account extends BaseController
 
 			if ($update) {
 				$this->session->set_flashdata('success-password', 'Password updated successfully.');
-				return redirect('screen/account');
+				return redirect(current_url());
 			}
 
 			$this->session->set_flashdata('failed-password', 'Password failed to update.');
-			return redirect('screen/account');
+			return redirect(current_url());
 		}
 
 		return show_404();

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 07 Jul 2023 pada 23.13
+-- Waktu pembuatan: 09 Jul 2023 pada 14.55
 -- Versi server: 10.3.38-MariaDB-0ubuntu0.20.04.1
 -- Versi PHP: 7.4.33
 
@@ -24,17 +24,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `quotes` (
   `id` int(11) NOT NULL,
-  `quote` text NOT NULL
+  `quote` text NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `quotes`
 --
 
-INSERT INTO `quotes` (`id`, `quote`) VALUES
-(1, 'Please follow health protocols to prevent the spread of COVID-19'),
-(2, 'Turn off the phone or use silent mode while in the mosque area'),
-(3, 'This is running text section and you can change this on the Awqat Dashboard');
+INSERT INTO `quotes` (`id`, `quote`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Please follow health protocols to prevent the spread of COVID-19', '2023-07-09 14:27:57', NULL, NULL),
+(2, 'Turn off the phone or use silent mode while in the mosque area', '2023-07-09 14:27:57', NULL, NULL),
+(3, 'This is running text section and you can change this on the Awqat Dashboard', '2023-07-09 14:27:57', NULL, NULL);
 
 -- --------------------------------------------------------
 

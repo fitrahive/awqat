@@ -13,7 +13,7 @@
 					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/localization') ? 'font-semibold' : '' ?>">
 						<a up-target="main" href="<?= base_url('screen/localization') ?>">Localization</a>
 					</li>
-					<li class="p-4 shrink-0" <?= current_url() === base_url('screen/themes') ? 'font-semibold' : '' ?>>
+					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/themes') ? 'font-semibold' : '' ?>">
 						<a up-target="main" href="<?= base_url('screen/themes') ?>">Screen Themes</a>
 					</li>
 					<li class="p-4 shrink-0 <?= current_url() === base_url('screen/quotes') ? 'font-semibold' : '' ?>">

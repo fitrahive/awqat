@@ -99,40 +99,40 @@ function realtime() {
 
 function handleMosque(current, update) {
   // mosque name
-  if (current.name !== update.name) {
+  if (!("name" in current) || current.name !== update.name) {
     $("title").html(update.name);
     $("h1").html(update.name);
   }
 
   // mosque address
-  if (current.address !== update.address) {
+  if (!("address" in current) || current.address !== update.address) {
     $("h1 + p").html(update.address);
   }
 }
 
 // label for prayer times
 function handleLabel(current, update) {
-  if (current.fajr !== update.fajr) {
+  if (!("fajr" in current) || current.fajr !== update.fajr) {
     $("#fajr").parent().find("small").html(update.fajr);
   }
 
-  if (current.sunrise !== update.sunrise) {
+  if (!("sunrise" in current) || current.sunrise !== update.sunrise) {
     $("#sunrise").parent().find("small").html(update.sunrise);
   }
 
-  if (current.dhuhr !== update.dhuhr) {
+  if (!("dhuhr" in current) || current.dhuhr !== update.dhuhr) {
     $("#dhuhr").parent().find("small").html(update.dhuhr);
   }
 
-  if (current.asr !== update.asr) {
+  if (!("asr" in current) || current.asr !== update.asr) {
     $("#asr").parent().find("small").html(update.asr);
   }
 
-  if (current.maghrib !== update.maghrib) {
+  if (!("maghrib" in current) || current.maghrib !== update.maghrib) {
     $("#maghrib").parent().find("small").html(update.maghrib);
   }
 
-  if (current.isha !== update.isha) {
+  if (!("isha" in current) || current.isha !== update.isha) {
     $("#isha").parent().find("small").html(update.isha);
   }
 }

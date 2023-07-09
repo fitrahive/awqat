@@ -27,74 +27,76 @@ function getParams(data = {}) {
 function realtime() {
   var data = JSON.parse(localStorage.getItem("data"));
 
-  // prepare adhan-js
-  var coordinates = new adhan.Coordinates(data.latitude, data.longitude);
-  var date = moment().locale(data.locale).toDate();
-  var prayer = new adhan.PrayerTimes(coordinates, date, getParams(data));
-  var tomorrow = moment().add(1, "day").locale(data.locale).toDate();
-  var nextPrayer = new adhan.PrayerTimes(
-    coordinates,
-    tomorrow,
-    getParams(data)
-  );
+  if (data !== null) {
+    // prepare adhan-js
+    var coordinates = new adhan.Coordinates(data.latitude, data.longitude);
+    var date = moment().locale(data.locale).toDate();
+    var prayer = new adhan.PrayerTimes(coordinates, date, getParams(data));
+    var tomorrow = moment().add(1, "day").locale(data.locale).toDate();
+    var nextPrayer = new adhan.PrayerTimes(
+      coordinates,
+      tomorrow,
+      getParams(data)
+    );
 
-  // parse prayer times (using moment-js)
-  var fajr = moment(prayer.fajr).locale(data.locale).format("HH:mm");
-  var sunrise = moment(prayer.sunrise).locale(data.locale).format("HH:mm");
-  var dhuhr = moment(prayer.dhuhr).locale(data.locale).format("HH:mm");
-  var asr = moment(prayer.asr).locale(data.locale).format("HH:mm");
-  var maghrib = moment(prayer.maghrib).locale(data.locale).format("HH:mm");
-  var isha = moment(prayer.isha).locale(data.locale).format("HH:mm");
+    // parse prayer times (using moment-js)
+    var fajr = moment(prayer.fajr).locale(data.locale).format("HH:mm");
+    var sunrise = moment(prayer.sunrise).locale(data.locale).format("HH:mm");
+    var dhuhr = moment(prayer.dhuhr).locale(data.locale).format("HH:mm");
+    var asr = moment(prayer.asr).locale(data.locale).format("HH:mm");
+    var maghrib = moment(prayer.maghrib).locale(data.locale).format("HH:mm");
+    var isha = moment(prayer.isha).locale(data.locale).format("HH:mm");
 
-  // prayer times
-  $("#fajr").html(fajr);
-  $("#sunrise").html(sunrise);
-  $("#dhuhr").html(dhuhr);
-  $("#asr").html(asr);
-  $("#maghrib").html(maghrib);
-  $("#isha").html(isha);
+    // prayer times
+    $("#fajr").html(fajr);
+    $("#sunrise").html(sunrise);
+    $("#dhuhr").html(dhuhr);
+    $("#asr").html(asr);
+    $("#maghrib").html(maghrib);
+    $("#isha").html(isha);
 
-  // active prayer time
-  $("#prayer-times > div").removeAttr("style");
-  $("#".concat(prayer.currentPrayer()))
-    .parent()
-    .css("color", "var(--active-color)");
+    // active prayer time
+    $("#prayer-times > div").removeAttr("style");
+    $("#".concat(prayer.currentPrayer()))
+      .parent()
+      .css("color", "var(--active-color)");
 
-  // set next prayer time
-  if (prayer.nextPrayer() !== "none") {
-    var name = data.label[prayer.nextPrayer()];
-    var time = moment(prayer[prayer.nextPrayer()])
+    // set next prayer time
+    if (prayer.nextPrayer() !== "none") {
+      var name = data.label[prayer.nextPrayer()];
+      var time = moment(prayer[prayer.nextPrayer()])
+        .locale(data.locale)
+        .format("HH:mm");
+
+      $("#next > span").html(name.concat(" ".concat(time)));
+    } else {
+      var name = data.label[nextPrayer.nextPrayer()];
+      var time = moment(nextPrayer[nextPrayer.nextPrayer()])
+        .locale(data.locale)
+        .format("HH:mm");
+
+      $("#next > span").html(name.concat(" ".concat(time)));
+    }
+
+    // parse day and clock (using moment-js)
+    var day = moment()
       .locale(data.locale)
-      .format("HH:mm");
+      .format("dddd")
+      .replace("Minggu", "Ahad");
+    var masehi = moment().locale(data.locale).format("DD MMMM YYYYY") + " M";
+    var hijri =
+      moment()
+        .locale(data.locale)
+        .add(data["adjustment.hijri"], "days")
+        .format("iDD iMMMM iYYYY") + " H";
+    var clock = moment().locale(data.locale).format("HH:mm:ss");
 
-    $("#next > span").html(name.concat(" ".concat(time)));
-  } else {
-    var name = data.label[nextPrayer.nextPrayer()];
-    var time = moment(nextPrayer[nextPrayer.nextPrayer()])
-      .locale(data.locale)
-      .format("HH:mm");
-
-    $("#next > span").html(name.concat(" ".concat(time)));
+    // day and clock
+    $("#day").html(day);
+    $("#masehi").html(masehi);
+    $("#hijri").html(hijri);
+    $("#clock").html(clock);
   }
-
-  // parse day and clock (using moment-js)
-  var day = moment()
-    .locale(data.locale)
-    .format("dddd")
-    .replace("Minggu", "Ahad");
-  var masehi = moment().locale(data.locale).format("DD MMMM YYYYY") + " M";
-  var hijri =
-    moment()
-      .locale(data.locale)
-      .add(data["adjustment.hijri"], "days")
-      .format("iDD iMMMM iYYYY") + " H";
-  var clock = moment().locale(data.locale).format("HH:mm:ss");
-
-  // day and clock
-  $("#day").html(day);
-  $("#masehi").html(masehi);
-  $("#hijri").html(hijri);
-  $("#clock").html(clock);
 }
 
 function handleMosque(current, update) {

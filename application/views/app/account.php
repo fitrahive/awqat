@@ -34,6 +34,11 @@
 								<?= $this->session->flashdata('failed-profile') ?>
 							</div>
 						<?php endif ?>
+						<?php if ($this->session->flashdata('success-profile')) : ?>
+							<div class="mb-6 p-4 text-sm text-emerald-800 font-semibold rounded-lg bg-emerald-50" role="alert">
+								<?= $this->session->flashdata('success-profile') ?>
+							</div>
+						<?php endif ?>
 
 						<div class="mb-6">
 							<label for="username" class="blockfont-medium text-slate-700 cursor-pointer">
@@ -66,7 +71,7 @@
 						</div>
 
 						<div class="mb-0">
-							<button class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
+							<button name="profile" value="1" class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
 								Save
 							</button>
 						</div>
@@ -86,14 +91,19 @@
 								<?= $this->session->flashdata('failed-password') ?>
 							</div>
 						<?php endif ?>
+						<?php if ($this->session->flashdata('success-password')) : ?>
+							<div class="mb-6 p-4 text-sm text-emerald-800 font-semibold rounded-lg bg-emerald-50" role="alert">
+								<?= $this->session->flashdata('success-password') ?>
+							</div>
+						<?php endif ?>
 
 						<div class="mb-6">
-							<label for="password" class="blockfont-medium text-slate-700 cursor-pointer">
+							<label for="current" class="blockfont-medium text-slate-700 cursor-pointer">
 								Current Password
 							</label>
 
 							<div class="mt-2">
-								<input type="password" name="password" id="password" class="px-4 py-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none transition duration-100 ease-linear" placeholder="Input your password">
+								<input type="password" name="current" id="current" class="px-4 py-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none transition duration-100 ease-linear" placeholder="Input your password">
 							</div>
 						</div>
 
@@ -118,7 +128,7 @@
 						</div>
 
 						<div class="mb-0">
-							<button class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
+							<button name="password" value="1" class="w-full bg-sky-500 hover:bg-sky-700 py-3 leading-5 rounded-md font-semibold text-white transition duration-100 ease-linear">
 								Save
 							</button>
 						</div>

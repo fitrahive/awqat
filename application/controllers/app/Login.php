@@ -51,7 +51,7 @@ class Login extends BaseController
 		]);
 
 		if (!$this->form_validation->run()) {
-			$failed = array_shift($this->form_validation->error_array());
+			$failed = current($this->form_validation->error_array());
 			$this->session->set_flashdata('failed', $failed);
 			return redirect(current_url());
 		}

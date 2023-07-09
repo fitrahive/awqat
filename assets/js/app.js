@@ -1,6 +1,6 @@
 function init() {
   up.log.config.banner = false;
-  up.log.enable();
+  up.log.disable();
 
   up.on("up:fragment:inserted", function () {
     $("[modal-backdrop]").remove();

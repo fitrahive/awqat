@@ -99,40 +99,40 @@ function realtime() {
 
 function handleMosque(current, update) {
   // mosque name
-  if (!("name" in current) || current.name !== update.name) {
+  if (current.name !== update.name) {
     $("title").html(update.name);
     $("h1").html(update.name);
   }
 
   // mosque address
-  if (!("address" in current) || current.address !== update.address) {
+  if (current.address !== update.address) {
     $("h1 + p").html(update.address);
   }
 }
 
 // label for prayer times
 function handleLabel(current, update) {
-  if (!("fajr" in current) || current.fajr !== update.fajr) {
+  if (current.fajr !== update.fajr) {
     $("#fajr").parent().find("small").html(update.fajr);
   }
 
-  if (!("sunrise" in current) || current.sunrise !== update.sunrise) {
+  if (current.sunrise !== update.sunrise) {
     $("#sunrise").parent().find("small").html(update.sunrise);
   }
 
-  if (!("dhuhr" in current) || current.dhuhr !== update.dhuhr) {
+  if (current.dhuhr !== update.dhuhr) {
     $("#dhuhr").parent().find("small").html(update.dhuhr);
   }
 
-  if (!("asr" in current) || current.asr !== update.asr) {
+  if (current.asr !== update.asr) {
     $("#asr").parent().find("small").html(update.asr);
   }
 
-  if (!("maghrib" in current) || current.maghrib !== update.maghrib) {
+  if (current.maghrib !== update.maghrib) {
     $("#maghrib").parent().find("small").html(update.maghrib);
   }
 
-  if (!("isha" in current) || current.isha !== update.isha) {
+  if (current.isha !== update.isha) {
     $("#isha").parent().find("small").html(update.isha);
   }
 }
@@ -195,12 +195,14 @@ function init() {
 
   var data = JSON.parse(localStorage.getItem("data"));
 
-  // initializing mosque name and address
-  handleMosque({}, { name: data.name, address: data.address });
-  // initializing prayer times label
-  handleLabel({}, data.label);
-  // initializing running text
-  handleQuotes({}, data.quotes);
+  if (data !== null) {
+    // initializing mosque name and address
+    handleMosque({}, { name: data.name, address: data.address });
+    // initializing prayer times label
+    handleLabel({}, data.label);
+    // initializing running text
+    handleQuotes({}, data.quotes);
+  }
 
   sync(data);
   realtime();
